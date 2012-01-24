@@ -17,9 +17,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <time.h>
 
 # define RATIO (7/3.0)
 
@@ -38,11 +38,11 @@ int main(void) {
 
         if (scanf("%d", &guess) <= 0) {
             printf("\nAn error occured.\n");
-            return 1;
+            return EXIT_FAILURE;
         }
 
         else if (guess == -1)
-            return 0;
+            return EXIT_SUCCESS;
 
         else if (abs(water-guess) > water/20.0) {
             ++deads;
@@ -62,5 +62,5 @@ int main(void) {
         }
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
